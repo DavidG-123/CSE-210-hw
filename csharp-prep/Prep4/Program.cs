@@ -12,6 +12,23 @@ class Program
         numbers.Add(Int16.Parse(userNumber));
         AddIt(numbers);
     }
+
+    static void AddIt(List<int> args){
+        Console.Write("Enter number: ");
+        int userNumber = Int16.Parse(Console.ReadLine());
+        if (args[(args.Count)-1] == 0){
+            Product(args);
+        }
+        else if (userNumber != 0)
+        {
+            args.Add(userNumber);
+            AddIt(args);
+        }
+        else {
+            Product(args);
+        }
+    }
+
     static void Product(List<int> args)
     {
         int sum = 0;
@@ -31,21 +48,5 @@ class Program
         Console.WriteLine($"The average is: {sum/args.Count}");
         Console.WriteLine($"The largest number is: {max}");
 
-    }
-    static void AddIt(List<int> args){
-        Console.Write("Enter number: ");
-        int userNumber = Int16.Parse(Console.ReadLine());
-        if (args[(args.Count)-1] == 0){
-            Product(args);
-        }
-        else if (userNumber != 0)
-        {
-            args.Add(userNumber);
-            AddIt(args);
-        }
-        else {
-            Product(args);
-        }
-        
-    }
+    }   
 }
