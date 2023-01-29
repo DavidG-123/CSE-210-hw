@@ -26,13 +26,4 @@ class Program
         
         myResume.Display();
     }
-    
-    // static void (string[] args)
-    // {
-    //     Console.Write("What is your job title? ");
-    //     string jobValue = Console.ReadLine();
-    //     Console.Write("What company do you work for? ");
-    //     string companyName = Console.ReadLine();
-    //     Console.Write("What year did you start? ");
-    // }
 }
