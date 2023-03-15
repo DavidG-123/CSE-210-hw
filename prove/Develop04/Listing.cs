@@ -1,4 +1,13 @@
 using System;
 using System.Collections.Generic;
 
-class Listing {}
+public class Listing {
+    public void ListThem() {
+        void UserStart() {
+
+        }
+        void UserNext() {
+
+        }
+    }
+}

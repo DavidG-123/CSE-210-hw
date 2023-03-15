@@ -1,4 +1,16 @@
 using System;
 using System.Collections.Generic;
 
-class Reflection {}
+public class Reflection : Graphics {
+    public void Reflect() {
+        void UserStart() {
+            MessageBoard(new List<int>{2,3,4,5});
+            Loading();
+            
+        }
+        void UserNext() {
+
+        }
+        UserStart();
+    }
+}

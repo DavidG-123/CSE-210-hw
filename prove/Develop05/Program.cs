@@ -5,6 +5,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop05 World!");
+        Console.WriteLine("Welcome to the Good-Minded Mindfulness\u1d57\u1d50 network!\n");
     }
 }

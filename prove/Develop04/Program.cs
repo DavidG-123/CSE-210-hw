@@ -5,6 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Breathing TakeBreaths = new Breathing() {};
+        Breathing TakeBreaths = new Breathing();
+        TakeBreaths.Breathe();
     }
 }
