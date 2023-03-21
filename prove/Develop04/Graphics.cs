@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Linq;
 
 public class Graphics {
     private string _RGBseq;
     private List<string> _responses;
+    private static string _listThis;
     private List<string> _messageBoard = new List<string>
     {$"Welcome to the Good-Minded Mindfulness\u1d57\u1d50 network!\n",
     $"Let's start with breathing:\n",
@@ -17,7 +19,8 @@ public class Graphics {
     $"What is your favorite thing about that experience?\n",
     $"What did you learn from that experience?\n",
     $"{_listingQuestions()}\n",
-    $""
+    $"Now in your head list as many of thesde as you can.",
+    $"You listed {_listThis} things."
     };
     private static string _reflectQuestion() {
         Random random = new Random();
@@ -32,10 +35,10 @@ public class Graphics {
     private static string _listingQuestions() {
         Random random = new Random();
         string[] question = {
-        "Who is someone that you appreciate?",
-        "What is one of your personal strengths?",
-        "What is the name of someone who has encouraged or helped you this week?",
-        "When was a time that you felt the holy spirit this month?",
+        "Who are some of the people that you appreciate?",
+        "What are some of your personal strengths?",
+        "What are the names of people who have encouraged or helped you this week?",
+        "When were times that you felt the holy spirit this month?",
         "Who are some of your personal role models?"
         };
         return(question[random.Next(0,3)]);
@@ -110,6 +113,25 @@ public class Graphics {
             }
             Thread.Sleep(1000);
         }
+    }
+    public void ListThis() {
+        string e = "";
+        int count = 0;
+        while (true) {
+            string y = Console.ReadLine();
+            if (y == "done") {
+                    break;
+            }
+            else {
+                e += y + " ";
+            }
+        }
+        foreach (var ch in e) {
+            if (ch == ' ') {
+                count++;
+            }
+        }
+        _listThis = $"{count}";
     }
     public void Waiting() {
         Thread.Sleep(5000);
