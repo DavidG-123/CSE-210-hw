@@ -12,11 +12,11 @@ public class Graphics {
     $"Now time to reflect.\n",
     $"{_reflectQuestion()}\n",
     $"\n\n\n",
-    $"",
-    $"",
-    $"",
-    $"",
-    $"",
+    $"How does that experience matter to you?\n",
+    $"How did you feel when it was over?\n",
+    $"What is your favorite thing about that experience?\n",
+    $"What did you learn from that experience?\n",
+    $"{_listingQuestions()}\n",
     $""
     };
     private static string _reflectQuestion() {
@@ -29,7 +29,17 @@ public class Graphics {
         };
         return(question[random.Next(0,3)]);
     }
-    
+    private static string _listingQuestions() {
+        Random random = new Random();
+        string[] question = {
+        "Who is someone that you appreciate?",
+        "What is one of your personal strengths?",
+        "What is the name of someone who has encouraged or helped you this week?",
+        "When was a time that you felt the holy spirit this month?",
+        "Who are some of your personal role models?"
+        };
+        return(question[random.Next(0,3)]);
+    }
 
     public string[] Colors = {
         $"\u25A0              ",
@@ -100,6 +110,9 @@ public class Graphics {
             }
             Thread.Sleep(1000);
         }
+    }
+    public void Waiting() {
+        Thread.Sleep(5000);
     }
     public void RecordResponse(string response){
         _responses.Add(response);
