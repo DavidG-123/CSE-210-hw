@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class Reflection : Graphics {
     public void Reflect() {
         void UserStart() {
-            MessageBoard(new List<int>{2,3,4,5});
+            MessageBoard(new List<int>{3,4,5});
             Loading();
             MessageBoard(new List<int>{6});
             Waiting();
@@ -14,11 +14,8 @@ public class Reflection : Graphics {
             Waiting();
             MessageBoard(new List<int>{9});
             Waiting();
-            UserNext();
-        }
-        void UserNext() {
-            Listing lists = new Listing();
-            lists.ListThem();
+            MessageBoard(new List<int>{14});
+            Thread.Sleep(3000);
         }
         UserStart();
     }
