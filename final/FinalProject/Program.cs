@@ -8,21 +8,25 @@ using System.Text;
 using System.Net;
 using System.Net.Sockets;
 
-class Program
+public partial class Program : Socks
 {
+    public override IPAddress[] localIPs() {
+        return Dns.GetHostAddresses(hostName);
+    }
+    public static string compileMessage1 = "";
+
+    
     static void Main(string[] args)
     {
         Console.WriteLine("Welcome to Mega Chatrooms(tm)\n");
         
-        string hostName = Dns.GetHostName();
-        IPAddress[] localIPs = Dns.GetHostAddresses(hostName);
-        
+             
         
         TcpListener server = new TcpListener(IPAddress.Any, 9999);
         
         server.Start();
 
-        string compileMessage1 = "";
+        
 
         while (true)
         

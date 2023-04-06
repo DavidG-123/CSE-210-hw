@@ -2,8 +2,8 @@ using System;
 using System.Net;
 using System.Net.Sockets;
 
-class Socks
+public abstract class Socks
 {
-    static string hostName = Dns.GetHostName();
-    IPAddress[] localIPs = Dns.GetHostAddresses(hostName);
+    public string hostName = Dns.GetHostName();
+    public abstract IPAddress[] localIPs();
 }
