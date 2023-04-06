@@ -7,8 +7,3 @@ class Socks
     static string hostName = Dns.GetHostName();
     IPAddress[] localIPs = Dns.GetHostAddresses(hostName);
 }
-
-class TheStatic
-{
-
-}
